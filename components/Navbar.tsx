@@ -1,5 +1,5 @@
 import { logo } from '@/public/assets'
-import {useRef, useState} from 'react'
+import React, {useRef, useState} from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import {motion} from 'framer-motion'
@@ -25,7 +25,7 @@ const navbar = () => {
     e.currentTarget.classList.add("active")
   }
   return (
-    <div className="w-full shadow-navbarShadow h-20 lg:h-[12vh] sticky top-0 z-50 bg-bodyColor px-4">
+    <div className="w-full h-20 lg:h-[12vh] sticky top-0 z-50 bg-bodyColor px-4">
       <div className="max-w-container h-full mx-auto py-1 font-titleFont flex items-center justify-between">  
         <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{duration:0.5}}>
             <Image className="w-14 h-14" src={logo} alt="logo" />
@@ -50,7 +50,8 @@ const navbar = () => {
                 animate={{y: 0, opacity: 1}}
                 transition={{duration:0.1, delay:0.1}} 
                 >
-                <span className="text-textGreen">01.</span>About
+                {/* <span className="text-textGreen">01.</span> */}
+                About
                 </motion.li>
                 </Link>
 
@@ -62,7 +63,8 @@ const navbar = () => {
                 animate={{y: 0, opacity: 1}}
                 transition={{duration:0.1, delay:0.2}} 
                 >
-                <span className="text-textGreen">02.</span>Experience
+                {/* <span className="text-textGreen">02.</span> */}
+                Experience
                 </motion.li>
                 </Link>
 
@@ -74,7 +76,7 @@ const navbar = () => {
                 animate={{y: 0, opacity: 1}}
                 transition={{duration:0.1, delay:0.3}} 
                 >
-                <span className="text-textGreen">03.</span>Project
+                Project
                 </motion.li>
                 </Link>
 
@@ -86,7 +88,8 @@ const navbar = () => {
                 animate={{y: 0, opacity: 1}}
                 transition={{duration:0.1, delay:0.4}} 
                 >
-                <span className="text-textGreen">04.</span>Contact
+                {/* <span className="text-textGreen">04.</span> */}
+                Contact
                 </motion.li>
                 </Link>
             </ul>
